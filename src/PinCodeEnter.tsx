@@ -81,11 +81,8 @@ class PinCodeEnter extends React.PureComponent<IProps, IState> {
     }
   }
 
-  async componentWillMount() {
+  async componentDidMount() {
     this.keyChainResult = await Keychain.getGenericPassword()
-  }
-
-  componentDidMount() {
     if (!this.props.touchIDDisabled) {
       TouchID.isSupported()
         .then(() => {

@@ -34,7 +34,7 @@ class PINCode extends React.PureComponent {
         this.changeInternalStatus = this.changeInternalStatus.bind(this);
         this.renderLockedPage = this.renderLockedPage.bind(this);
     }
-    async componentWillMount() {
+    async componentDidMount() {
         await react_native_1.AsyncStorage.getItem(this.props.timePinLockedAsyncStorageName || timePinLockedAsyncStorageNameDefault).then((val) => {
             this.setState({ pinLocked: !!val });
         });

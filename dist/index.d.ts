@@ -94,7 +94,7 @@ export declare enum PinResultStatus {
 }
 declare class PINCode extends React.PureComponent<IProps, IState> {
     constructor(props: IProps);
-    componentWillMount(): Promise<void>;
+    componentDidMount(): Promise<void>;
     changeInternalStatus: (status: PinResultStatus) => void;
     renderLockedPage: () => JSX.Element;
     render(): JSX.Element;

@@ -49,10 +49,8 @@ class PinCodeEnter extends React.PureComponent {
             this.setState({ pinCodeStatus: nextProps.pinStatusExternal });
         }
     }
-    async componentWillMount() {
+    async componentDidMount() {
         this.keyChainResult = await Keychain.getGenericPassword();
-    }
-    componentDidMount() {
         if (!this.props.touchIDDisabled) {
             react_native_touch_id_1.default.isSupported()
                 .then(() => {

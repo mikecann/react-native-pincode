@@ -64,8 +64,7 @@ declare class PinCodeEnter extends React.PureComponent<IProps, IState> {
     keyChainResult: any;
     constructor(props: IProps);
     componentWillReceiveProps(nextProps: IProps): void;
-    componentWillMount(): Promise<void>;
-    componentDidMount(): void;
+    componentDidMount(): Promise<void>;
     endProcess: (pinCode?: string | undefined) => Promise<void>;
     launchTouchID(): Promise<void>;
     render(): JSX.Element;
